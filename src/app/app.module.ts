@@ -21,8 +21,7 @@ import { ListComponent } from './heroes/list/list.component';
     BrowserModule,
     AppRoutingModule,
     CounterModule,
-    HeroesModule,
-   
+    HeroesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

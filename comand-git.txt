@@ -1,0 +1,2 @@
+comando
+git checkout -- . va a reconstrir el proyecto al ultimo commit
