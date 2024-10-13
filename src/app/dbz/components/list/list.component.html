@@ -1,16 +1,9 @@
-<h4>Listado Personajes</h4>
-<ul class="list-group ">
-  <li
-    *ngFor="let characters of characterList; 
-    let i = index;
-    let isFrist = first;
-    let isLast = last;
-    let isEven = even;
-    let isOdd = odd;
-
-    "class="list-group-item ">
-    <span class="text-primary">{{ i + 1 }}</span>
-    {{ characters.name }} - power: {{ characters.power }}
-   
+<ul class="list-group">
+  <li *ngFor="let character of characterList; let i = index">
+    <div class="text-primary">
+      <span>{{ i + 1 }}</span>
+      {{ character.name }} - poder: {{ character.power }}
+    </div>
+    <button class="btn btn-danger" (click)="deleteCharacter(i)">Eliminar</button>
   </li>
 </ul>
