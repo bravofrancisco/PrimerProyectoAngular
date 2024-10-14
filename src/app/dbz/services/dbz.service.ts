@@ -11,7 +11,7 @@ export class dbzService {
     { id: uuid(), name: 'Vegeta', power: 1000 },
   ];
 
-  onNewCharacter(character: Character): void {
+  addCharacter(character: Character): void {
     const NewCharacter: Character = { id: uuid(), ...character };
     this.characters.push(character);
   }
@@ -24,6 +24,8 @@ export class dbzService {
   //     );
   //   }
   deleteCharacterById(id: string) {
-    this.characters = this.characters.filter(characters => characters.id !== id); 
+    this.characters = this.characters.filter(
+      (characters) => characters.id !== id
+    );
   }
 }
