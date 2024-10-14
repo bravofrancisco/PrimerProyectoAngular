@@ -4,6 +4,6 @@
       <span>{{ i + 1 }}</span>
       {{ character.name }} - poder: {{ character.power }}
     </div>
-    <button class="btn btn-danger" (click)="deleteCharacter(i)">Eliminar</button>
+    <button class="btn btn-danger" (click)="deleteCharacter(character.id)">Eliminar</button>
   </li>
 </ul>

@@ -9,14 +9,16 @@ import { Character } from '../../interfaces/character.inteface';
 export class ListComponent {
   @Input() public characterList: Character[] = [];
   
-  @Output() public onDelete: EventEmitter<number> = new EventEmitter();
+  @Output() public onDelete: EventEmitter<string> = new EventEmitter();
 
   ngOnChanges() {
     console.log('Lista de personajes recibida:', this.characterList);
   }
 
-  deleteCharacter(index: number): void {
-    console.log('Eliminar personaje en índice:', index);
-    this.onDelete.emit(index); // Emitir el índice
+  deleteCharacter(id?: string): void {
+    
+    if(!id) return;
+    console.log('Eliminar personaje en índice:', id);
+    this.onDelete.emit(id); // Emitir el índice
   }
 }
